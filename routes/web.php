@@ -4,6 +4,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 /*
@@ -19,6 +20,9 @@ use Illuminate\Support\Facades\Storage;
 
 Route::get('/', function () {
     // return Storage::get('itechut.jpg');
+
+    Log::info('This is a log message.');
+    
     return [
         'time' => (microtime(true) - LARAVEL_START) * 1000,
         'memory' => memory_get_peak_usage() / 1024 / 1024,
