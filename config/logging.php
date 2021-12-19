@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'default' => env('LOG_CHANNEL', 'stack'),
+    'default' => isset($_SERVER['LOG_CHANNEL']) ? $_SERVER['LOG_CHANNEL'] : env('LOG_CHANNEL', 'stack'),
 
     /*
     |--------------------------------------------------------------------------
