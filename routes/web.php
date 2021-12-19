@@ -22,7 +22,7 @@ Route::get('/', function () {
     // return Storage::get('itechut.jpg');
 
     // Log::error('This is a log message.');
-    logger('Hello World from aws');
+    // logger('Hello World from aws');
     
     return [
         'time' => (microtime(true) - LARAVEL_START) * 1000,
