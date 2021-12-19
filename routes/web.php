@@ -21,7 +21,8 @@ use Illuminate\Support\Facades\Storage;
 Route::get('/', function () {
     // return Storage::get('itechut.jpg');
 
-    Log::info('This is a log message.');
+    // Log::error('This is a log message.');
+    logger('Hello World from aws');
     
     return [
         'time' => (microtime(true) - LARAVEL_START) * 1000,
