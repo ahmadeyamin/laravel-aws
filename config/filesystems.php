@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => $_SERVER['FILESYSTEM_DRIVER'] ? $_SERVER['FILESYSTEM_DRIVER'] : env('FILESYSTEM_DRIVER', 'local'),
 
     /*
     |--------------------------------------------------------------------------
